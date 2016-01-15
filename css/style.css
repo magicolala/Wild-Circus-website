@@ -1,0 +1,25 @@
+body {
+	background-color:#EC1D22;
+	color:white;
+}
+
+.carousel-caption h2 {
+	font-size:40px;
+	font-family: 'Yellowtail', cursive;
+	color:black;
+	background-color:rgba(255,255,255,0.40);
+}
+
+.carousel-caption p {
+	font-size:20px;
+	color:black;
+	background-color:rgba(255,255,255,0.40);	
+}
+
+.programmes {
+	padding-top:30px;
+}
+
+.programmes h2 {
+	color:yellow;	
+}
