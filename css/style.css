@@ -6,15 +6,14 @@ body {
 
 .carousel-caption h2 {
 	font-size:40px;
-	font-family: 'Yellowtail', cursive;
 	color:black;
-	background-color:rgba(255,255,255,0.40);
+	text-shadow: 2px 2px white;
 }
 
 .carousel-caption p {
 	font-size:20px;
-	color:black;
-	background-color:rgba(255,255,255,0.40);	
+	color:white;
+	text-shadow: 2px 2px black;
 }
 
 .programmes {
@@ -60,26 +59,19 @@ body {
 
 .artists {
 	text-align:justify;
+	background-color:rgba(255,221,0,0.30);
+	border-radius:10px;
+	box-shadow: 1px 1px 5px #555;
+	padding:10px;
 }
 
 .artists img {
 	padding-top:25px;
 }
 
-.magie {
-	background-color: rgba(255,95,99,0.53);
-	margin-top: 40px;
-	box-shadow: 1px 1px 3px #555;
-}
-
-.alma {
-	
-}
-
-.footer {
+footer {
 	margin-top: 30px;
-	border: 2px solid black;
-	background-color: rgba(47,168,255,0.50);
+	margin-bottom: 30px;
 }
 
 .carous {
@@ -117,6 +109,14 @@ body {
 
 .table {
 	background-color:#F0B931;
+}
+
+.about  {
+	background-color:rgba(255,221,0,0.30);
+	margin-top:30px;
+	padding:15px;
+	border-radius:10px;
+	box-shadow: 1px 1px 5px #555;
 }
 
 
