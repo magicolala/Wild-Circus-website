@@ -14,6 +14,13 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     
+    <link href="css/libs/animate.css" rel="stylesheet" type="text/css"><!--Librairie animation CSS-->
+    
+    <style>
+    .wow:first-child {
+      visibility: hidden;
+    }
+  	</style>    
 
   </head>
   
@@ -30,14 +37,15 @@
 					<a href="index.html"><img src="img/boutton_home.png" alt="Boutton Home" height="70"></a>                             
 				</li>
 				<li class=" boutton-shows">
-					<a href="#"><img src="img/boutton_shows.png" alt="Boutton Shows" height="70" ></a>
+					<a href="about.html"><img src="img/boutton_shows.png" alt="Boutton Shows" height="70" ></a>
 				</li>
                 <li>
-					<a href="#"><img src="img/boutton_artists.png" alt="Boutton Artists" height="70" ></a>
+					<a href="Artists.html"><img src="img/boutton_artists.png" alt="Boutton Artists" height="70" ></a>
 				</li>
 			</ul>
 		</div>
 	</div>
+    <section data-wow-offset="300" class="wow bounceInRight" style="visibility: visible; animation-name: bounceInRight; animation-duration: 1500ms;">
    	<div class="content">
     <div class="row artists">
 		<div class="col-md-12">
@@ -105,20 +113,40 @@ He promote the history and art of conjuring through his extraordinary collection
                 <a href="https://twitter.com/WildCodeSchool">
     				<img src="file:///C|/Users/Catherine/Downloads/Cédric/Website/Bootstrap Circus/layoutit/src/Wild-Circus-website/img/twiiter.png" alt="Twitter" height="30">
    				 </a>
-    			<a class="btn btn-primary btn-xlg" href="tel:713-992-0916" style="padding: 5px; background-color: rgba(0,0,238,.5); font-size: small;">
+    			<a class="btn btn-primary btn-xlg" href="tel:01 45 12 45 13" style="padding: 5px; background-color: rgba(0,0,238,.5); font-size: small;">
    Reservation <span class="glyphicon glyphicon-earphone" style="padding-left:10px; padding-right:10px;"></span>01 45 12 45 13
    				</a>
               
           </div>
         </div>
     </footer>
-</div>
-</div>   
+	</div>
+	</section>
+	</div>   
 
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+    
+    <script src="dist/wow.js"></script>
+	<script>
+        wow = new WOW(
+          {
+            animateClass: 'animated',
+            offset:       100,
+            callback:     function(box) {
+              console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            }
+          }
+        );
+        wow.init();
+        document.getElementById('moar').onclick = function() {
+          var section = document.createElement('section');
+          section.className = 'section--purple wow fadeInDown';
+          this.parentNode.insertBefore(section, this);
+        };
+     </script>
   
   </body>
   

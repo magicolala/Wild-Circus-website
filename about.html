@@ -14,6 +14,13 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     
+    <link href="css/libs/animate.css" rel="stylesheet" type="text/css"><!--Librairie animation CSS-->
+    
+    <style>
+    .wow:first-child {
+      visibility: hidden;
+    }
+  	</style>
 
   </head>
   
@@ -29,23 +36,28 @@
 				<li>
 					<a href="index.html"><img src="img/boutton_home.png" alt="Boutton Home" height="70"></a>                             
 				</li>
-				<li class=" boutton-shows">
-					<a href="#"><img src="img/boutton_shows.png" alt="Boutton Shows" height="70" ></a>
+				<li class=" boutton-about">
+					<a href="about.html"><img src="img/boutton_shows.png" alt="Boutton about" height="70" ></a>
 				</li>
                 <li>
-					<a href="#"><img src="img/boutton_artists.png" alt="Boutton Artists" height="70" ></a>
+					<a href="Artists.html"><img src="img/boutton_artists.png" alt="Boutton Artists" height="70" ></a>
 				</li>
 			</ul>
 		</div>
 	</div>
+    <section data-wow-offset="300" class="wow bounceInLeft" style="visibility: visible; animation-name: bounceInLeft; animation-duration: 1500ms;">
    	<div class="content">
     <div class="row about">
 		<div class="col-md-12">
-        	<h1>About Us</h1>
-        	<p>Circus Oz was born in Melbourne, Australia in 1978. For over 35 years the company has been putting up extraordinary shows and successfully touring them both nationally and internationally. From New York to South American rainforests, Madrid to outback Australia, Circus Oz has taken its self-crafted performances of wit, grace and spectacle to 27 countries across five continents, to critical acclaim. The Circus Oz show is a rock-n-roll, animal free circus that adults and children can enjoy together. Celebrating breathtaking stunts, irreverent humour, cracking live music and an all human ensemble, Circus Oz promotes the best of the Australian spirit: generosity, diversity, death-defying bravery, and a fair go for all.
+        	<h1>Wild Circus wtf ?</h1>
+            <img class="flotte" alt="Wild Circus" src="img/photo_cirque.jpg"/>
+        	<p>Wild Circus was born in Paris, France in 1978. For over 35 years the company has been putting up extraordinary shows and successfully touring them both nationally and internationally. From New York to South American rainforests, Madrid to outback Australia, Wild Circus has taken its self-crafted performances of wit, grace and spectacle to 27 countries across five continents, to critical acclaim. The Wild Circus show is a rock-n-roll, animal free circus that adults and children can enjoy together. Celebrating breathtaking stunts, irreverent humour, cracking live music and an all human ensemble, Wild Circus promotes the best of the France spirit: generosity, diversity, death-defying bravery, and a fair go for all.
             </p>
-        </div>
-		</div>
+            <blockquote><p>For Three and a half decades, Wild Circus has delighted itself into the hearts of generations of audiences embracing its role as France's National Circus.</p></blockquote>
+            <p>Circus Oz has a strong belief in tolerance, diversity and human kindness. For many years the company has engaged in issues associated with social justice and a good time for all, including work each year with many charities, indigenous communities and the raising of over $392,000 in donations to support refugees and asylum seekers.
+            </p>            
+      </div>
+	</div>
 				
     <footer>
         <div class="row">
@@ -61,25 +73,47 @@
                 <a href="https://twitter.com/WildCodeSchool">
     				<img src="img/twiiter.png" alt="Twitter" height="30">
    				 </a>
-    			<a class="btn btn-primary btn-xlg" href="tel:713-992-0916" style="padding: 5px; background-color: rgba(0,0,238,.5); font-size: small;">
+    			<a class="btn btn-primary btn-xlg" href="tel:01 45 12 45 13" style="padding: 5px; background-color: rgba(0,0,238,.5); font-size: small;">
    Reservation <span class="glyphicon glyphicon-earphone" style="padding-left:10px; padding-right:10px;"></span>01 45 12 45 13
    				</a>
               
           </div>
         </div>
         
-        
     </footer>
-
-  
-
-
+    
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+    
  </div>
+ </section>
  
  </div>
+ 
+ 	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    
+    <script src="dist/wow.js"></script>
+	<script>
+        wow = new WOW(
+          {
+            animateClass: 'animated',
+            offset:       100,
+            callback:     function(box) {
+              console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            }
+          }
+        );
+        wow.init();
+        document.getElementById('moar').onclick = function() {
+          var section = document.createElement('section');
+          section.className = 'section--purple wow fadeInDown';
+          this.parentNode.insertBefore(section, this);
+        };
+     </script>
+ 
  </body>
  
 
